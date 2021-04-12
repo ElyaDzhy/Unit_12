@@ -1,0 +1,19 @@
+/* CSS selectors */
+
+/* Селекторы потомков */
+/* Элементы с классом "child" с любым уровнем вложенности в #parent */
+
+#parent .child {
+  color: chocolate;
+  font-weight: bold;
+}
+
+/* Селекторы дочерних элементов */
+/* Элементы с классом "child" с первым уровнем вложенности в #parent */
+
+#parent2 > .child {
+  border: 1px solid darkgoldenrod;
+}
+
+/* Селекторы соседних элементов */
+/*  */
