@@ -1,19 +1,57 @@
 /* CSS selectors */
 
-/* Селекторы потомков */
-/* Элементы с классом "child" с любым уровнем вложенности в #parent */
+/* Селекторы соседних элементов (эл. одного уровня вложенности) */
 
-#parent .child {
-  color: chocolate;
-  font-weight: bold;
+/* p {
+  color: darkblue;
+} /*for all paragraphs*/
+
+/* p + p {
+  color: red;
+} /*for all paragraphs, which are after another paragraphs*/
+
+/* h2 + div {
+  border: 3px solid green;
 }
 
-/* Селекторы дочерних элементов */
-/* Элементы с классом "child" с первым уровнем вложенности в #parent */
+h2 + .test {
+  font-style: italic;
+} */
+*/ .circles {
+  box-sizing: border-box;
+  height: 60vh;
+  width: 20vw;
+  margin-top: auto;
+  padding: 20px;
+  display: flex;
 
-#parent2 > .child {
-  border: 1px solid darkgoldenrod;
+  flex-direction: row;
+  align-self: center;
+  background-color: darkmagenta;
+  border-radius: 12px;
+  align-items: flex-end;
 }
 
-/* Селекторы соседних элементов */
-/*  */
+.circle {
+  width: 5vw;
+  height: 5vw;
+
+  background-color: darkorange;
+  border-radius: 30%;
+
+  display: inline-block;
+}
+
+.circle + .circle {
+  margin-left: 20px;
+}
+
+.text {
+  text-indent: 2em;
+  color: brown;
+}
+
+.text ~ p {
+  color: blue;
+  font-weight: bolder;
+} /*один уровень вложенности*/
