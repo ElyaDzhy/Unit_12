@@ -1,57 +1,54 @@
-/* CSS selectors */
-
-/* Селекторы соседних элементов (эл. одного уровня вложенности) */
-
-/* p {
-  color: darkblue;
-} /*for all paragraphs*/
-
-/* p + p {
-  color: red;
-} /*for all paragraphs, which are after another paragraphs*/
-
-/* h2 + div {
-  border: 3px solid green;
-}
-
-h2 + .test {
-  font-style: italic;
-} */
-*/ .circles {
+/* ПСЕВДОКЛАССЫ */
+* {
   box-sizing: border-box;
-  height: 60vh;
-  width: 20vw;
-  margin-top: auto;
-  padding: 20px;
-  display: flex;
-
-  flex-direction: row;
-  align-self: center;
-  background-color: darkmagenta;
-  border-radius: 12px;
-  align-items: flex-end;
 }
+:root {
+  font-size: 32px;
+  --test-elem-size: 200px;
+} /*корневой элемент всего документа*/
 
-.circle {
-  width: 5vw;
-  height: 5vw;
-
-  background-color: darkorange;
-  border-radius: 30%;
-
+.test {
+  height: var(--test-elem-size);
+  width: var(--test-elem-size);
   display: inline-block;
+
+  background: burlywood;
 }
 
-.circle + .circle {
-  margin-left: 20px;
+.test:active {
+  border: 4px solid orange;
+  cursor: grabbing;
+} /* пкм*/
+
+.test:focus {
+  outline-color: red;
+  outline-offset: 2px;
+  outline-style: solid;
+  outline-width: 6px;
 }
 
-.text {
-  text-indent: 2em;
-  color: brown;
+.test:hover {
+  /* --test-elem-size: 400px; */
+  background-color: cadetblue;
+  cursor: grab;
+} /*событийный, отрабатывает при наведени курсора мыши на элем*/
+
+.test2 {
+  height: var(--test-elem-size);
+  width: var(--test-elem-size);
+  background-color: burlywood;
 }
 
-.text ~ p {
-  color: blue;
-  font-weight: bolder;
-} /*один уровень вложенности*/
+.test2:hover {
+  --test-elem-size: 10px;
+}
+
+/* cursor (check in mdn )*/
+
+button {
+  cursor: pointer;
+}
+
+.test + .test {
+  margin-top: 10px;
+}
