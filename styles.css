@@ -2,53 +2,62 @@
 * {
   box-sizing: border-box;
 }
+
 :root {
-  font-size: 32px;
-  --test-elem-size: 200px;
-} /*корневой элемент всего документа*/
+  font-size: 40px;
+}
 
-.test {
-  height: var(--test-elem-size);
-  width: var(--test-elem-size);
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  font-size: 0;
+}
+
+li {
   display: inline-block;
-
-  background: burlywood;
+  color: white;
+  font-family: sans-serif;
 }
 
-.test:active {
-  border: 4px solid orange;
-  cursor: grabbing;
-} /* пкм*/
+a.navLink {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.5rem;
+  color: inherit;
+  display: inline-block;
+  text-align: center;
+  padding: 20px;
+  min-width: 150px;
+  width: 100%;
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 2px solid darkslategray;
 
-.test:focus {
-  outline-color: red;
-  outline-offset: 2px;
-  outline-style: solid;
-  outline-width: 6px;
+  background: cadetblue;
 }
 
-.test:hover {
-  /* --test-elem-size: 400px; */
-  background-color: cadetblue;
-  cursor: grab;
-} /*событийный, отрабатывает при наведени курсора мыши на элем*/
+a.navLink:focus {
+  outline-width: 10px;
+}
+/* 
+a.navLink:link {
+} */
 
-.test2 {
-  height: var(--test-elem-size);
-  width: var(--test-elem-size);
-  background-color: burlywood;
+a.navLink:visited {
+  background-color: darkslategray;
 }
 
-.test2:hover {
-  --test-elem-size: 10px;
-}
+article > h2 ~ span.main {
+  border: 3px solid green;
+} /*Для всех span с классом main, которые являются соседями с h2, которые являются дочерними элем. article */
 
-/* cursor (check in mdn )*/
-
-button {
-  cursor: pointer;
-}
-
-.test + .test {
-  margin-top: 10px;
-}
+/* 
+px
+%
+em, rem
+vh, vm, vmin, vmax
+*/
